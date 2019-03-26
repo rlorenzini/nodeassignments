@@ -1,0 +1,37 @@
+<html>
+<head></head>
+
+<body>
+
+  <h1>Trips</h1>
+  Number of trips planned: {{count}}.
+
+  <!-- start of the iteration on the List array -->
+  <ul>
+  {{#tripsList}}
+  <li style="list-style: none"> <!-- background-image: url({{image}}) -->
+    <span>
+      You are planning to go to {{title}}! <br>
+      Be ready to leave at {{departureTime}}! <br>
+      Work will be expecting you back on {{returnTime}}. <br>
+      Here's a picture. Sooooo lovely! <img src="{{image}}"> <br>
+    </span>
+    <br>
+    <form class="" action="/deleteTrip" method="post">
+      <input type="hidden" name="deletedTrip" value="{{tripId}}">
+      <input type="submit" name="" value="Delete">
+    </form>
+  </li>
+  <!-- end of the iteration on the List array -->
+  {{/tripsList}}
+
+  {{^tripsList}}
+    <p>Sorry no trips found</p>
+  {{/tripsList}}
+</ul>
+<form action="/add-trip" method="get">
+<button type="submit" name="button">Add Trip Page</button>
+</form>
+</body>
+
+</html>
