@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title></title>
+<!-- <link rel="stylesheet" href="/css/version-1/site.css"></link> -->
+</head>
+<body>
+<div>
+{{> menu}}
+</div>
+<ul style="list-style:none;">
+  {{#movies}}
+  <li>
+    {{movieTitle}}
+    <form action="/movies/delete-movie" method="post">
+      <input type="hidden" name="deleteMovie" value="{{movieId}}">
+      <input type="submit" name="" value="Delete"><br>
+    </form>
+    <img src="{{moviePoster}}" style="width:130px;height:200px"/><br>
+    <!-- {{moviePoster}}<br> -->
+
+    Genre: {{movieGenre}}<br>
+    {{movieDescription}}
+  </li>
+  {{/movies}}
+
+
+  {{^movies}}
+  <h2>Nothing found! Add a movie.</h2>
+  {{/movies}}
+</ul>
+</body>
+</html>
+<!-- URL for testing: http://www.impawards.com/2009/posters/avatar_ver5_xlg.jpg -->
