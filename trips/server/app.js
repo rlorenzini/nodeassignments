@@ -2,12 +2,16 @@ const express = require('express'),
   mustacheExpress = require('mustache-express'),
   bodyParser = require('body-parser'),
   server = express(),
-  port = 3000
+  port = 3000;
 
+var cors = require('cors')
+server.use(cors())
 server.use(bodyParser.urlencoded({extended:false}))
 server.engine('mustache',mustacheExpress())
 server.set('views','./views')
 server.set('view engine','mustache')
+
+server.use('/css',express.static('css'))
 
 let trips = []
 //unique id, title, image, departure, return
