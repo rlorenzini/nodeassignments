@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<h3>Enter New Trip</h3>
+
+<form action="/trips" method="post">
+  <input type="text" name="title" placeholder="Location"/>
+  Leave: <input type="date" name="leaveTime"/>
+  Return: <input type="date" name="returnTime"/>
+  <input type="text" name="imageURL" placeholder="image url"/>
+  <input type="submit"/>
+</form>
+<form action="/logout" method="post">
+  <input type="submit" value="Logout"/>
+</form>
+
+<ul id="chatMessagesList">
+</ul>
+
+<input type="text" id="chatMessageTextBox"/>
+<button id="btnSend">Send</button>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/client.js"></script>
+</html>

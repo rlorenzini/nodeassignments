@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+  <h3>Trips</h3>
+  <a href="/index">Enter New Trip</a>
+
+  <form action='/logout' method='post'>
+    <input type='submit' value='Logout'/>
+  </form>
+
+<!-- starting of the loop -->
+  {{#tripListing}}
+
+    <div>{{title}}</div>
+    <img src='{{imageURL}}' width="200" height="200" />
+    <div>Departure: {{departureDate}}</div>
+    <div>Return: {{returnDate}}</div>
+
+<!-- creating forms so we can submit tripId for deletion -->
+  <form action='/deleteTrip' method='post'>
+    <input type="hidden" name="tripId" value='{{tripId}}' />
+    <input type="submit" value="Delete" />
+  </form>
+
+  {{/tripListing}}
+
+  <h3>Chat</h3>
+
+  <ul id="chatMessagesList">
+  </ul>
+
+  <input type="text" id="chatMessageTextBox"/>
+  <button id="btnSend">Send</button>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/client.js"></script>
+</html>
