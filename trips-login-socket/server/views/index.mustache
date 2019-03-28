@@ -6,23 +6,12 @@
   </head>
   <body>
 <h3>Enter New Trip</h3>
+{{> logout}}
 
-<form action="/trips" method="post">
-  <input type="text" name="title" placeholder="Location"/>
-  Leave: <input type="date" name="leaveTime"/>
-  Return: <input type="date" name="returnTime"/>
-  <input type="text" name="imageURL" placeholder="image url"/>
-  <input type="submit"/>
-</form>
-<form action="/logout" method="post">
-  <input type="submit" value="Logout"/>
-</form>
 
-<ul id="chatMessagesList">
-</ul>
+{{> addTrip}}
 
-<input type="text" id="chatMessageTextBox"/>
-<button id="btnSend">Send</button>
+{{> chat}}
 </body>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/client.js"></script>

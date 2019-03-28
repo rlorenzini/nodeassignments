@@ -4,6 +4,7 @@ const express = require('express'),
   // bodyParser = require('body-parser'),
   path = require('path'),
   uuid = require('uuid/v1'),
+  VIEWS_PATH = path.join(__dirname, '/views'),
   port = 3000;
 
 var http = require('http').Server(server),
@@ -33,7 +34,7 @@ const User = require('./user')
 
 const bodyParser = require('body-parser')
 server.use(bodyParser.urlencoded({extended:false}))
-server.engine('mustache',mustacheExpress())
+server.engine('mustache',mustacheExpress(VIEWS_PATH + '/partials', '.mustache'))
 server.set('views','./views')
 server.set('view engine', 'mustache')
 
@@ -81,7 +82,7 @@ server.post('/login',(req,res)=>{
 })
 
 server.get('/login-error',(req,res)=>{
-  res.render('/login-error')
+  res.render('login-error')
 })
 server.post('/logout',(req,res)=>{
   req.session.destroy()

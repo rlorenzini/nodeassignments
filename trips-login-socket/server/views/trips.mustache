@@ -9,10 +9,7 @@
   <h3>Trips</h3>
   <a href="/index">Enter New Trip</a>
 
-  <form action='/logout' method='post'>
-    <input type='submit' value='Logout'/>
-  </form>
-
+{{> logout}}
 <!-- starting of the loop -->
   {{#tripListing}}
 
@@ -29,13 +26,7 @@
 
   {{/tripListing}}
 
-  <h3>Chat</h3>
-
-  <ul id="chatMessagesList">
-  </ul>
-
-  <input type="text" id="chatMessageTextBox"/>
-  <button id="btnSend">Send</button>
+{{> chat}}
 
 </body>
 <script src="/socket.io/socket.io.js"></script>
