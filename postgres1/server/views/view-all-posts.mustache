@@ -1,0 +1,30 @@
+
+<html>
+<head></head>
+
+<body>
+
+<h1>Posts</h1>
+
+<ul>
+{{#posts}}
+
+<li>
+  <div>
+  {{title}}
+  </div>
+  <p>
+  {{body}}
+  </p>
+  <form action="/delete-post" method="POST">
+    <input type="hidden" name="postId" value="{{postid}}" />
+    <button type="submit">Delete</button>
+  </form>
+</li>
+
+{{/posts}}
+</ul>
+
+</body>
+
+</html>
