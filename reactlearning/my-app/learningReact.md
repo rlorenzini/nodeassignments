@@ -60,7 +60,7 @@ We are now telling our Header.js file to export an HTML element of H1 stating "H
 
 Now that we have something to render, how are we actually rendering it? Is it a local host? Well, yes it is. When we did ```npm start``` earlier, React was ran in the terminal and created a localhost. By default, it will run on port 3000. If port 3000 is in use, the terminal will as if you want to use a new port. Press y and enter, and React will open a webpage automatically as localhost:PORT. Note that any time you save any update to any project file React will automatically refresh the page, similar to when we ran nodemon.
 
-If everything was written properly, you will see an HTML page with a bunch of errors. Go into the App.js file and under the render property type in <Header/>. Our imported class Header is run as an HTML element, which is able to self-close. This is telling your App.js to render the Header class as an HTML element, which will now display "Hello World" on your localhost: 3000. We have now created a React page. (Don't worry about the HTML page at this point. The HTML portion will be covered later.)
+If everything was written properly, you will see an HTML page with a bunch of errors. Go into the App.js file and under the render property type in ```<Header/>```. Our imported class Header is run as an HTML element, which is able to self-close. This is telling your App.js to render the Header class as an HTML element, which will now display "Hello World" on your localhost: 3000. We have now created a React page. (Don't worry about the HTML page at this point. The HTML portion will be covered later.)
 
 **High On Coding Assignment** 
 
