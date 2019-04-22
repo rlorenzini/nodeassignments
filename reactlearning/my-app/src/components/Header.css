@@ -1,0 +1,15 @@
+.header {
+  background-color: #52A6FA;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.header h1 {
+  padding: 1rem;
+}
+.header h2 {
+  padding: 1rem;
+}
+.header h3 {
+  padding: 1rem;
+}

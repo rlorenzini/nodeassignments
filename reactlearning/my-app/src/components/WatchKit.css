@@ -1,0 +1,17 @@
+.watchKit {
+  margin: 5%;
+  color: #52A6FA;
+}
+.watchKit #mainText {
+  color: black;
+}
+.watchKit #likeBar {
+  background-color: #F29018;
+  color: white;
+}
+.watchKit #likeBar div {
+    padding: 1rem;
+}
+.watchKit #likeBar p {
+  padding-left: 0.5rem;
+}

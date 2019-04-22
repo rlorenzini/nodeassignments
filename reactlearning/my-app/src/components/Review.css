@@ -1,0 +1,12 @@
+.review {
+  background-color: #DDDEE0;
+  margin: 5%;
+  color: #53585F;
+}
+.review h2 {
+  padding: 1rem;
+}
+.review p {
+  padding: 1rem;
+  color: black;
+}
