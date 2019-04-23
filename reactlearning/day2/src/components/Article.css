@@ -1,0 +1,9 @@
+.article-stats {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: lightgray;
+}
+.article-stats i {
+  padding-right: 1rem;
+}
