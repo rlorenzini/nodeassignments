@@ -4,11 +4,37 @@ import './App.css';
 import {Greeting} from './components/Greeting'
 import {Article} from './components/Article'
 import {Counter} from './components/Counter'
+import {CustomerList} from './components/CustomerList'
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      name: '',
+      customers:[]
+    }
+  }
+  handleNameChange=(e)=>{
+    this.setState({
+      name: e.target.value
+    })
+  }
+  handleNameSave=()=>{
+    let name = this.state.name
+    this.setState({
+      customers: this.state.customers.concat(name)
+      //array.push changes a STATE, which cannot be done in REACT
+      //concatenate creates a new array state and leaves the original state untouched
+      //my use .concat to add values to arrays
+    })
+  }
   render() {
     return (
       <div>
+      <input onChange={this.handleNameChange} type="text" placeholder="Input"/>
+      <button onClick={this.handleNameSave}>Save</button>
+      <h2>{this.state.name}</h2>
+      <CustomerList customers={this.state.customers}/>
       <Counter/>
       <h1>Hello World</h1>
       <Greeting name="Richard"/>
