@@ -28,13 +28,18 @@ class App extends Component {
       //my use .concat to add values to arrays
     })
   }
+  removeStuff=(customer)=>{
+    this.setState({
+      customers: this.state.customers.filter((item)=>item != customer)
+    })
+  }
   render() {
     return (
       <div>
       <input onChange={this.handleNameChange} type="text" placeholder="Input"/>
       <button onClick={this.handleNameSave}>Save</button>
       <h2>{this.state.name}</h2>
-      <CustomerList customers={this.state.customers}/>
+      <CustomerList customers={this.state.customers} removeStuff={this.removeStuff}/>
       <Counter/>
       <h1>Hello World</h1>
       <Greeting name="Richard"/>
