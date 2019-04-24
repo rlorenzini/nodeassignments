@@ -1,5 +1,5 @@
-<h1>Learning React</h1>
-
+<h1>:zap:Learning React:zap:</h1>
+ 
 > Single Page Application for adaptive web design
 
 * **Installing React**
@@ -90,9 +90,12 @@ There is nothing new here. Treat the individual css files how you would have wit
 
 - [x] Single Page Application
 - [x] Quick and Responsive User Interface
+- [x] In High Demand
 - [ ] ~~Faster Loadtime~~
 
 React is a front-end language designed to render one webpage and display different elements based on the user's input. Even though the initial loading time may be longer, the experience during use will be faster due to the entire site already being downloaded into the user's browser. React uses Components to render different elements of the page, which can each be styled individually or together. Components are able to communicate to one another by assigning values to an element. The parent element, such as App.js, will assign the value which the subclass, Header.js, with insert the value.
+
+React is also one of the most in-demand coding languages in the current job market, rivaled only by Angular. React has grown exponentially since its open-source release and has no signs of slowing down.
 
 Though not shown in the review, a quick example would be if we wrote the following in App.js
 ```<div><Header firstName="Richard"/></div>```
