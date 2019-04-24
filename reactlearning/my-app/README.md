@@ -1,6 +1,8 @@
 <h1>Learning React</h1>
 
-**Installing React**
+> Single Page Application for adaptive web design
+
+* **Installing React**
 
 To install React, open a terminal and type ```$ sudo npm install -g create-react```. This will install React as a global application which can be used in any project, but you still have to install React on a per-project basis.
 
@@ -12,7 +14,7 @@ You will notice React installed a basic project template for you to work with. T
 
 For now, while inside of your working directory run ```$ npm start```.
 
-**What Is React?**
+* **What Is React?**
 
 React is a single-page application builder, which means the website or application is one giant user interface which changes its display based on the user's actions. React never refreshes the browser (the user has to manually refresh the browser), which means once fully loaded React will appear to run quicker and smoother than other applications. In mustache-express, you will create multiple mustache pages with post and get requests. In React, you will have a single HTML page. The HTML page can be found under public/index.html.
 
@@ -22,7 +24,7 @@ By default, App.js is your primary JavaScript file.
 
 <img src="./pictures/appjs.png"/>
 
-**Get Started With Coding React**
+* **Get Started With Coding React**
 
 Looking at the App.js file, we notice the first line ```import React, { Component } from 'react';```. This first line says App.js is importing the React amodules and the Component class from the react application. This is very similar to node.js, but React already has all the modules we need to use at the moment. Instead of doing ```const express = require('express')``` we now just import all of React at once.
 
@@ -42,7 +44,7 @@ This is telling React to export our Header class from our file Header.js, but do
 
 As of now, we are going to stick with the Header.js format.
 
-**Understanding The Class System**
+* **Understanding The Class System**
 
 With React, classes are the primary way of sending data to your application. Components, as mentioned, is the superclass pre-built by React. When you see ```export class Header extends Component {``` this is stating we are creating a new class based off of a superclass called Component. Now, our new Header class has all the properties of the Component class.
 
@@ -62,7 +64,7 @@ Now that we have something to render, how are we actually rendering it? Is it a 
 
 If everything was written properly, you will see an HTML page with a bunch of errors. Go into the App.js file and under the render property type in ```<Header/>```. Our imported class Header is run as an HTML element, which is able to self-close. This is telling your App.js to render the Header class as an HTML element, which will now display "Hello World" on your localhost: 3000. We have now created a React page. (Don't worry about the HTML page at this point. The HTML portion will be covered later.)
 
-**High On Coding Assignment**
+* **High On Coding Assignment**
 
 <img src="./pictures/highoncoding.png"/>
 
@@ -84,7 +86,7 @@ We do not need to add ./components like we did in the App.js file since our Head
 
 There is nothing new here. Treat the individual css files how you would have with your partials using mustache-express and public. When you create a Component, it might be a good idea to create a separate css file for the Component dependent on your needs and desired uses of said Component. If we wanted to use Header.js on multiple pages, having an individual Header.css file will save us a lot of time and effort. If this is a custom header for just one page, having the styling inside of the page's css file can be a better option.
 
-**In Closing...**
+* **In Closing...**
 
 React is a front-end language designed to render one webpage and display different elements based on the user's input. Even though the initial loading time may be longer, the experience during use will be faster due to the entire site already being downloaded into the user's browser. React uses Components to render different elements of the page, which can each be styled individually or together. Components are able to communicate to one another by assigning values to an element. The parent element, such as App.js, will assign the value which the subclass, Header.js, with insert the value.
 
