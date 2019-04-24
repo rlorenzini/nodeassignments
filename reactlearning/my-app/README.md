@@ -1,7 +1,4 @@
 <h1>:zap:Learning React:zap:</h1>
-
-
-<audio src="dangerzone.mp3" controls preload></audio>
  
 > Single Page Application for adaptive web design
 
