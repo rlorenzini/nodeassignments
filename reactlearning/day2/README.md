@@ -78,7 +78,12 @@ Being able to set the value of a single state and call upon it is great, but not
 
 <img src="./pictures/appInput.png"/>
 
-On line 22, we are creating an input and button element and assigning an onChange property with the value of a function we are creating on line 16. onChange (remember, must have the correct capitalization) tells React to pull and use the value of the input field as someone is typing into the input field. For example, if I am typing my name Richard, React will show the state changing as "R", "RI", "RIC", "RICH", and so on to "RICHARD". Our function on line 16 will show you how React interprets the onChange property, but it will not be what you expect.
+On line 22, we are creating an input and button element and assigning an onChange property with the value of a function we are creating on line 16. Why is the syntax for the function so different? Since React does not require us to declare the function like JavaScript does, we can bypass writing extra lines of code. We can declare the name of the function and use React syntax to shorthand our functions. 
+
+```functionName=(inputVariable)=>{code goes here}``` is the React syntax for 
+```function functionName(inputVariable){code goes here}```. While React will accept you writing functions as you did in JavaScript, React is designed with its own syntax in mind (go figure). If you commit to using the JavaScript syntax, the more complicated your application gets the more lines of extra code you have to write to get anything done. If you plan to learn, and more importantly use, React you will need to commit to the React syntax and the JSX/ES6 syntax.
+
+onChange (remember, must have the correct capitalization) tells React to pull and use the value of the input field as someone is typing into the input field. For example, if I am typing my name Richard, React will show the state changing as "R", "RI", "RIC", "RICH", and so on to "RICHARD". Our function on line 16 will show you how React interprets the onChange property, but it will not be what you expect.
 
 # What is 'e'? 
 
