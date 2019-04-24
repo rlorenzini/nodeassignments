@@ -61,9 +61,11 @@ Lines 13 through 18 replace the previous function and this.state we have set up 
 
 ## Anonymous Functions and Arrow Syntax 
 
-Why does designating a function and using an anonymous function with an arrow syntax look so different if they're doing the same thing? Because of "THIS". This is not defined by the superceding value of the class when creating a function with standard syntax. This will be defined by the value of the function you just created inside of the class, which is currently undefined.
+**this** is the state of the class, function, etc you are working with. Everything you do will have a behind-the-scenes state, which can be called upon with **this**. In an object, you would do something like object.value. In your React classes, you will do **this.value** when calling upon states.
 
-Using the arrow function ```=>``` will take the previous values for this and apply them into the function we are creating. The arrow function is extremely powerful is this way, allowing us to simplify functions and utilize previous states without needing any extra steps. The arrow function is not restricted to React alone, but this may be your first time utilizing an arrow function in such a manner. Just remember, if you ever need to carry a state or this value into a function, an arrow function is the way to go.
+Why does designating a function and using an anonymous function with an arrow syntax look so different if they're doing the same thing? Because of **THIS**. This is not defined by the superceding value of the class when creating a function with standard syntax. **This** will be defined by the value of the function you just created inside of the class, which is currently undefined.
+
+Using the arrow function ```=>``` will take the previous values for **this** and apply them into the function we are creating. The arrow function is extremely powerful is this way, allowing us to simplify functions and utilize previous states without needing any extra steps. The arrow function is not restricted to React alone, but this may be your first time utilizing an arrow function in such a manner. Just remember, if you ever need to carry a **state** or **this** value into a function, an arrow function is the way to go.
 
 <img src="./pictures/counterFinished.png"/>
 
