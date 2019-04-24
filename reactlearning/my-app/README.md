@@ -6,7 +6,7 @@ To install React, open a terminal and type ```$ sudo npm install -g create-react
 
 Create a new folder on your desktop and navigate to the folder via the terminal. Once inside your working directory, type ```$ npx create-react-app my-app-name``` where **my-app-name** is the name of your project folder. This command can take a few minutes to fully execute, but once it is finished...
 
-<img src="/pictures/default.png"/> 
+<img src="./pictures/default.png"/> 
 
 You will notice React installed a basic project template for you to work with. The only changes I have made from the pre-built project folder is the src/components folder, which I will cover later on.
 
@@ -20,7 +20,7 @@ Just like in mustache, which used partials, React uses what are called Component
 
 By default, App.js is your primary JavaScript file.
 
-<img src="appjs.png"/>
+<img src="./pictures/appjs.png"/>
 
 **Get Started With Coding React**
 
@@ -28,7 +28,7 @@ Looking at the App.js file, we notice the first line ```import React, { Componen
 
 This line is REQUIRED in all JavaScript Components which are using the superclass Components, which is pre-built with multiple functions by React. One of these functions, render(), is required for the class to work properly.
 
-<img src="headerjs.png"/>
+<img src="./pictures/headerjs.png"/>
 
 When we create our own Component, which I hace placed inside of the src/components folder for organizational purposes, we start with the same first line as in App.js. ```import React, { Component } from 'react';```
 
@@ -64,7 +64,7 @@ If everything was written properly, you will see an HTML page with a bunch of er
 
 **High On Coding Assignment**
 
-<img src="highoncoding.png"/>
+<img src="./pictures/highoncoding.png"/>
 
 Using the same App.js and Header.js file, we need to insert multiple components into our index.html page and render a page.
 
@@ -80,7 +80,7 @@ NOTE: elements inside of React do not have classes, but instead have classNames.
 On line 2 of our Header.js, we are importing our Header.css file. ```import './Header.css'```
 We do not need to add ./components like we did in the App.js file since our Header.js file and Header.css file are both located inside of the /components folder. If you add the import line without creating the css file, React will give you an error message on your webpage. Create the Header.css file, and let's add some styling.
 
-<img src="headercss.png"/>
+<img src="./pictures/headercss.png"/>
 
 There is nothing new here. Treat the individual css files how you would have with your partials using mustache-express and public. When you create a Component, it might be a good idea to create a separate css file for the Component dependent on your needs and desired uses of said Component. If we wanted to use Header.js on multiple pages, having an individual Header.css file will save us a lot of time and effort. If this is a custom header for just one page, having the styling inside of the page's css file can be a better option.
 
