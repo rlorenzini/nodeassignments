@@ -16,6 +16,8 @@ We then apply styling to the Component, which is then imported into said Compone
 <img src="./pictures/review7.png"/>
 <img src="./pictures/review8.png"/>
 
+In App.js, we can set our Component elements to have values. The values we define, such as Title, are created by us. React recognizes a capital element as a React Component and does not process it as an HTML element. Now, we can pass information between the parent and child with this.props.value.
+
 # Setting State in React 
 
 <img src="./pictures/startCounter.png"/>
