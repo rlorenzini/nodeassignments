@@ -1,4 +1,11 @@
 <h1>:zap:Learning React:zap:</h1>
+
+
+| React Lesson  | JS Difficulty |
+| ------------- | ------------- |
+| Basics | Intermediate  |
+| States  | Intermediate  |
+| Redux | Difficult |
  
 > Single Page Application for adaptive web design
 
