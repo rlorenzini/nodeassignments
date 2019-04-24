@@ -16,7 +16,7 @@ For now, while inside of your working directory run ```$ npm start```.
 
 * **What Is React?**
 
-React is a single-page application builder, which means the website or application is one giant user interface which changes its display based on the user's actions. React never refreshes the browser (the user has to manually refresh the browser), which means once fully loaded React will appear to run quicker and smoother than other applications. In mustache-express, you will create multiple mustache pages with post and get requests. In React, you will have a single HTML page. The HTML page can be found under public/index.html.
+React is a single-page application language, which means the website or application is one giant user interface which changes its display based on the user's actions. React never refreshes the browser (the user has to manually refresh the browser), which means once fully loaded React will appear to run quicker and smoother than other applications. In mustache-express, you will create multiple mustache pages with post and get requests. In React, you will have a single HTML page. The HTML page can be found under public/index.html.
 
 Just like in mustache, which used partials, React uses what are called Components. Components are individual pieces of a webpage which can communicate to one another and be displayed on multiple pages. Components are imported into your primary JavaScript file, which then renders the HTML page with all the Components. Due to the nature of Components, the smaller a Component is the better. If you want to use a header on multiple pages, your Component should only render that specific header and nothing else.
 
@@ -87,6 +87,10 @@ We do not need to add ./components like we did in the App.js file since our Head
 There is nothing new here. Treat the individual css files how you would have with your partials using mustache-express and public. When you create a Component, it might be a good idea to create a separate css file for the Component dependent on your needs and desired uses of said Component. If we wanted to use Header.js on multiple pages, having an individual Header.css file will save us a lot of time and effort. If this is a custom header for just one page, having the styling inside of the page's css file can be a better option.
 
 * **In Closing...**
+
+- [x] Single Page Application
+- [x] Quick and Responsive User Interface
+- [ ] ~~Faster Loadtime~~
 
 React is a front-end language designed to render one webpage and display different elements based on the user's input. Even though the initial loading time may be longer, the experience during use will be faster due to the entire site already being downloaded into the user's browser. React uses Components to render different elements of the page, which can each be styled individually or together. Components are able to communicate to one another by assigning values to an element. The parent element, such as App.js, will assign the value which the subclass, Header.js, with insert the value.
 
