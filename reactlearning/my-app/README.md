@@ -1,6 +1,4 @@
 <h1>:zap:Learning React:zap:</h1>
-
- /play tada
  
 > Single Page Application for adaptive web design
 
