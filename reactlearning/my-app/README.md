@@ -1,5 +1,7 @@
 <h1>:zap:Learning React:zap:</h1>
  
+/play dangerzone
+ 
 > Single Page Application for adaptive web design
 
 * **Installing React**
