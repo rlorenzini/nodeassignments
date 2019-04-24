@@ -8,7 +8,7 @@ To install React, open a terminal and type ```$ sudo npm install -g create-react
 
 Create a new folder on your desktop and navigate to the folder via the terminal. Once inside your working directory, type ```$ npx create-react-app my-app-name``` where **my-app-name** is the name of your project folder. This command can take a few minutes to fully execute, but once it is finished...
 
-<img src="./pictures/default.png"/> 
+<img src="./pictures/default.png" height="500px"/> 
 
 You will notice React installed a basic project template for you to work with. The only changes I have made from the pre-built project folder is the src/components folder, which I will cover later on.
 
