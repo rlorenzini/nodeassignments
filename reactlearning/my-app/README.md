@@ -2,10 +2,10 @@
 
 
 | React Lesson  | JS Difficulty |
-| ------------- | ------------- |
-| Basics | Intermediate  |
-| States  | Intermediate  |
-| Redux | Difficult |
+| :--- | :--- |
+| Basics | _Intermediate_  |
+| States  | _Intermediate_  |
+| Redux | ___Difficult___ |
  
 > Single Page Application for adaptive web design
 
