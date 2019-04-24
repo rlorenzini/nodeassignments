@@ -63,7 +63,7 @@ Lines 13 through 18 replace the previous function and this.state we have set up 
 
 **this** is the state of the class, function, etc you are working with. Everything you do will have a behind-the-scenes state, which can be called upon with **this**. In an object, you would do something like object.value. In your React classes, you will do **this.value** when calling upon states.
 
-Why does designating a function and using an anonymous function with an arrow syntax look so different if they're doing the same thing? Because of **THIS**. This is not defined by the superceding value of the class when creating a function with standard syntax. **This** will be defined by the value of the function you just created inside of the class, which is currently undefined.
+Why does designating a function and using an anonymous function with an arrow syntax look so different if they're doing the same thing? Because of **THIS**. **This** is not defined by the superceding value of the class when creating a function with standard syntax. **This** will be defined by the value of the function you just created inside of the class, which is currently undefined.
 
 Using the arrow function ```=>``` will take the previous values for **this** and apply them into the function we are creating. The arrow function is extremely powerful is this way, allowing us to simplify functions and utilize previous states without needing any extra steps. The arrow function is not restricted to React alone, but this may be your first time utilizing an arrow function in such a manner. Just remember, if you ever need to carry a **state** or **this** value into a function, an arrow function is the way to go.
 
@@ -89,15 +89,15 @@ onChange (remember, must have the correct capitalization) tells React to pull an
 
 # What is 'e'? 
 
-e is not unique to React. e stands for event, and stores the value of the event. When you console.log(e), you'll see an object full of functions and data. e has a lot of utility, but doesn't display what we want from the start. Looking through the e object, we find e has a property "target" which has a property "value". 
+**e** is not unique to React. e stands for event, and stores the value of the event. When you console.log(**e**), you'll see an object full of functions and data. **e** has a lot of utility, but doesn't display what we want from the start. Looking through the **e** object, we find **e** has a property "target" which has a property "value". 
 
 <img src="./pictures/logTargetValue.png"/> 
 
-Since our function is onChange for the input element, the target is the input and the value is the value of the input element. When we log e.target.value, we get the changing value for the input element. But... It still will not display what we want since we have not set a state.
+Since our function is onChange for the input element, the target is the input and the value is the value of the input element. When we log **e**.target.value, we get the changing value for the input element. But... It still will not display what we want since we have not set a state.
 
 <img src="./pictures/setTargetValue.png"/> 
 
-By giving e.target.value a state, we have now told React to hold onto the input element's changing value for us. Now, instead of logging the line of code for the element, we get the actual input element's value. 
+By giving **e**.target.value a state, we have now told React to hold onto the input element's changing value for us. Now, instead of logging the line of code for the element, we get the actual input element's value. 
 
 <img src="./pictures/seeStateChange.png"/>
 
@@ -105,7 +105,7 @@ React now shows us what we put into the input field. This is a great first step 
 
 <img src="./pictures/printNameChange.png"/>
 
-You might notice we are not calling e.target.value into the h2 element I created on line 26. Our function on line 16 set the state of name to the value, so just like before we are calling upon the state itself. Now when we load the application and input a name, we get the value displayed on the page for our viewing pleasure. 
+You might notice we are not calling **e**.target.value into the h2 element I created on line 26. Our function on line 16 set the state of name to the value, so just like before we are calling upon the state itself. Now when we load the application and input a name, we get the value displayed on the page for our viewing pleasure. 
 
 <img src="./pictures/viewNameChange.png"/>
 
