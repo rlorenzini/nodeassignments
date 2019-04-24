@@ -1,7 +1,5 @@
 <h1>:zap:Learning React:zap:</h1>
  
-[Dangerzone](http://caseyohara.github.io/campfire-sounds/sounds/dangerzone.mp3)
- 
 > Single Page Application for adaptive web design
 
 * **Installing React**
