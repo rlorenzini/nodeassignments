@@ -1,6 +1,6 @@
 <h1>:zap:Learning React:zap:</h1>
  
-<a href="dangerzone.mp3">Dangerzone</a>
+[Dangerzone](/dangerzone.mp3)
  
 > Single Page Application for adaptive web design
 
