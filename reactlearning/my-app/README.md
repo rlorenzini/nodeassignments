@@ -1,6 +1,5 @@
 <h1>:zap:Learning React:zap:</h1>
 
-
 | React Lesson  | JS Difficulty |
 | :--- | :--- |
 | Basics | _Intermediate_  |
@@ -57,7 +56,8 @@ With React, classes are the primary way of sending data to your application. Com
 
 One of these properties is mandatory, which is called the render function.
 
-```export class Header extends Component {
+```javascript
+export class Header extends Component {
 render() {
 return (
 <h1>Hello World</h1>
@@ -107,7 +107,8 @@ React is also one of the most in-demand coding languages in the current job mark
 Though not shown in the review, a quick example would be if we wrote the following in App.js
 ```<div><Header firstName="Richard"/></div>```
 and wrote this inside of Header.js
-```export class Header extends Component {
+```javascript
+export class Header extends Component {
   render() {
     let firstName = this.props.firstName
     let nameItem = firstName.map((fName)=>{
