@@ -1,0 +1,12 @@
+.menu {
+  background-color: green;
+  color: white;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer {
+  background-color: blue;
+  color: white;
+}
