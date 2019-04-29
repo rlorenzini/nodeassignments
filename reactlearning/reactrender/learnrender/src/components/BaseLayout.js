@@ -30,10 +30,57 @@ export class BookList extends Component {
 }
 
 export class AddBook extends Component {
-  render(){
-    return(
-      <h2>AddBook</h2>
-    )
+  constructor(props){
+   super(props)
+   this.state ={
+     books: [],
+     title: '',
+     genre: ''
+   }
+ }
+componentDidMount() {
+  this.populateBooks()
+}
+populateBooks() {
+ let url = "http://localhost:8080/books"
+ fetch(url)
+ .then(response => response.json())
+ .then(json => {
+   this.setState({
+     books: json
+   })
+ })
+}
+addBook=(e)=>{
+ fetch('localhost:8080/books', {
+   method: 'POST',
+   body: JSON.stringify(this.state),
+   headers: {
+     "Content-type": "application/json"
+   }
+ }).then(()=>this.populateBooks())
+ e.preventDefault()
+}
+recordChange=(e)=> {
+ let userInput = e.target.name
+ let title = e.target.title
+
+ this.setState({
+     [userInput]: e.target.value
+   })
+   console.log(this.state)
+}
+render(){
+  return(
+    <div>
+    <h2>AddBook</h2>
+    <form onSubmit = {this.addBook}>
+      <input onChange = {this.recordChange} type='text' name='title' placeholder='Name of Book' />
+      <input onChange = {this.recordChange} type='text' name='genre' placeholder='Genre of Book' />
+      <input className = 'submitButton' type = 'submit'/>
+    </form>
+    </div>
+  )
   }
 }
 
