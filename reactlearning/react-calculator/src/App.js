@@ -1,26 +1,69 @@
-import React from 'react';
+import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {connect} from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  constructor(props){
+    super(props)
+  }
+
+  render() {
+    const { value, btns, addElem, clear, equal } = this.props;
+    return (
+      <div className="App">
+        <div className="value-container">
+          <input type="text" value={value} />
+        </div>
+        <div className="buttons-container">
+          {btns.map((item, key) => {
+            if(item == "C"){
+              return(
+                <button onClick={ clear.bind(this) } key={key}>{item}</button>
+              )
+            } else if(item == "="){
+              return(
+                <button onClick={ equal.bind(this, value) } key={key}>{item}</button>
+              )
+            } else {
+              return(
+                <button onClick={ addElem.bind(this, item) } key={key}>{item}</button>
+              )
+            }
+          })}
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return{
+    value: state.value,
+    btns: state.btns
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return{
+    addElem: (text) => {
+      dispatch({
+        type: 'ADD_ELEM',
+        text
+      })
+    },
+    clear: () => {
+      dispatch({
+        type: 'CLEAR'
+      })
+    },
+    equal: (value) => {
+      dispatch({
+        type: 'EQUAL',
+        value
+      })
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);
