@@ -1,13 +1,13 @@
 import React,{Component} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux';
 
 
 class App extends Component {
-  constructor(props){
-    super(props)
-  }
+  // constructor(props){
+  //   super(props)
+  // }
 
   render() {
     const { value, btns, addElem, clear, equal } = this.props;
@@ -18,11 +18,11 @@ class App extends Component {
         </div>
         <div className="buttons-container">
           {btns.map((item, key) => {
-            if(item == "C"){
+            if(item === "C"){
               return(
                 <button onClick={ clear.bind(this) } key={key}>{item}</button>
               )
-            } else if(item == "="){
+            } else if(item === "="){
               return(
                 <button onClick={ equal.bind(this, value) } key={key}>{item}</button>
               )
