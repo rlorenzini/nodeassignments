@@ -8,7 +8,7 @@ const calcReducer = (state = calcState, action) => {
         case 'ADD_ELEM':
             return{
                 ...state,
-                value: state.value == 0 ? action.text : state.value + action.text
+                value: state.value === 0 ? action.text : state.value + action.text
             }
         case 'CLEAR':
             return{
