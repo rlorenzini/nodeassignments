@@ -36,11 +36,17 @@ app.get('/hello',authenticate,(req,res)=>{
   res.send("hello world")
 })
 
+app.post('/register',(req,res)=>{
+  let username=req.body.username
+  let password=req.body.password
+  users.push({username:username,password:password})
+})
+
 app.post('/login',(req,res)=>{
   let username=req.body.username
   let password=req.body.password
   console.log(username, password)
-  
+
   let user = users.find((u)=>{
     return u.username == username && u.password == password
   })
