@@ -1,0 +1,15 @@
+.footer {
+  background-color: black;
+  color: white;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 70%;
+}
+.footer a {
+  color: white;
+}
+.footer a:active {
+  color: red;
+}
