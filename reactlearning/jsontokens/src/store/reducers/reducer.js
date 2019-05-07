@@ -9,6 +9,11 @@ const reducer = (state=initialState,action)=>{
       ...state,
       isAuthenticated: action.token != null ? true:false
     }
+    case 'LOGOUT':
+    return{
+      ...state,
+      isAuthenticated: false
+    }
     default:return state
   }
 }

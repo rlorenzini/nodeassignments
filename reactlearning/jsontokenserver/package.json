@@ -1,5 +1,5 @@
 {
-  "name": "stuff",
+  "name": "josntokenserver",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.1",
+    "passport-oauth": "^1.0.0",
     "pg": "^7.10.0",
     "pg-hstore": "^2.3.2",
     "pg-promise": "^8.6.5",
