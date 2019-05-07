@@ -1,5 +1,6 @@
 const initialState = {
-  isAuthenticated:false
+  isAuthenticated:false,
+  username:''
 }
 
 const reducer = (state=initialState,action)=>{
@@ -7,12 +8,14 @@ const reducer = (state=initialState,action)=>{
     case 'ON_AUTH':
     return{
       ...state,
-      isAuthenticated: action.token != null ? true:false
+      isAuthenticated: action.token != null ? true:false,
+      username: action.username
     }
     case 'LOGOUT':
     return{
       ...state,
-      isAuthenticated: false
+      isAuthenticated: false,
+      username:''
     }
     default:return state
   }

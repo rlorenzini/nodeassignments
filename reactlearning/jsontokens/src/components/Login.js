@@ -16,16 +16,20 @@ class Login extends Component {
     axios.post('http://localhost:8080/login',{
       username: this.state.username,
       password: this.state.password,
-    }).then(response=>{
+    })
+    .then(response=>{
+
       console.log("button was clicked")
       let token = response.data.token
+      let username = response.data.username
       console.log(token)
 
       localStorage.setItem('jsonwebtoken',token)
-      this.props.onAuthenticated(token)
+      this.props.onAuthenticated(username,token)
 
       setAuthenticationHeader(token)
-    }).catch(error=>console.log(error))
+    })
+    .catch(error=>console.log(error))
   )
 
   handleInputChange=(e)=>(
@@ -54,11 +58,15 @@ class Login extends Component {
     )
   }
 }
-
+const mapStateToProps=(state)=>{
+  return{
+    uname:state.username
+  }
+}
 const mapDispatchToProps=(dispatch)=>{
   return{
-    onAuthenticated:(token)=>dispatch({type:'ON_AUTH',token:token})
+    onAuthenticated:(username,token)=>dispatch({type:'ON_AUTH',username:username,token:token})
   }
 }
 
-export default connect(null, mapDispatchToProps)(Login)
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      <h1>Welcome to this Barebones Webiste!</h1>
+      <h1>Welcome to this Barebones Website!</h1>
       {this.props.children}
       </div>
     )
