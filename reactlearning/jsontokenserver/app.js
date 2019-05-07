@@ -2,15 +2,24 @@ const express = require('express'),
   app = express(),
   bodyParser = require('body-parser'),
   cors = require('cors'),
+  session = require('express-session'),
   jwt = require('jsonwebtoken'),
+  models = require('./models')
   PORT = 8080;
 
-const users = [
-  {username:"richard",password:"password"}
-]
+// const users = [
+//   {username:"richard",password:"password"}
+// ]
+
+app.use(session({
+  secret: "fmgffndmf",
+  resave: false,
+  saveUninitialized: false
+}))
 
 app.use(cors())
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 function authenticate(req,res,next){
   let headers = req.headers["authorization"]
@@ -25,21 +34,26 @@ function authenticate(req,res,next){
         res.status(401).json({message:'Token invalid'})
       }
     }else{
-      res.status(401).json({message:'Token incalid'})
+      res.status(401).json({message:'Token invalid'})
     }
   })
   console.log(headers)
   console.log(decoded)
 }
 
-app.get('/hello',authenticate,(req,res)=>{
-  res.send("hello world")
+app.get('/username',authenticate,(req,res)=>{
+  res.send(currentUser[currentUser.length-1])
 })
 
 app.post('/register',(req,res)=>{
   let username=req.body.username
   let password=req.body.password
-  users.push({username:username,password:password})
+  let user = models.User.build({
+    username:username,
+    password:password
+  })
+  user.save()
+  // users.push(user)
 })
 
 app.post('/login',(req,res)=>{
@@ -47,19 +61,26 @@ app.post('/login',(req,res)=>{
   let password=req.body.password
   console.log(username, password)
 
-  let user = users.find((u)=>{
-    return u.username == username && u.password == password
-  })
+  models.User.findOne({
+    where:{
+      username:username
+    }
+  }).then((user)=>{
+
+  // let user = users.find((u)=>{
+  //   return u.username == username && u.password == password
+  // })
   if(user){
     jwt.sign({username:username},'secret',
   function(err,token){
     if(token){
-      res.json({token:token})
+      res.json({username:username,token:token})
     }else{
       res.status(500).json({message:'unable to generate token'})
     }
   })
   }
+  })
 })
 
 app.listen(PORT, () => {
