@@ -1,0 +1,15 @@
+.footer {
+  background-color: black;
+  color: white;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer a {
+  color: white;
+  margin: 5px;
+}
+.footer a:active {
+  color: red;
+}
